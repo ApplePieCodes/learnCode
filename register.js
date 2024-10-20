@@ -27,12 +27,13 @@ function registerUser() {
         var { data, error } = yield client
             .from("UserData")
             .select("*")
-            .eq("username", usernameInput);
-        if (error) {
-            console.log(error);
+            .eq("username", usernameInput)
+            .single();
+        if (error && error.code !== 'PGRST116') { // PGRST116 is "No rows found"
+            console.error("Supabase Query Error:", error.message);
             return;
         }
-        if (data.length > 0) {
+        if (data) {
             showError("username-error", "User with this username already exists");
             return;
         }

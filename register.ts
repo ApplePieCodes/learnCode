@@ -19,7 +19,7 @@ async function registerUser() {
         isValid = false;
     }
 
-    const { data, error } = await client
+    var { data, error } = await client
     .from("UserData")
     .select("*")
     .eq("username", usernameInput)
