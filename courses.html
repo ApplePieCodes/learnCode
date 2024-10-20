@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--Metadata-->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>learnCode</title>
+        <!-- Remove On Publish <base href="https://applepiecodes.github.io/learnCode/"> -->
+
+        <!--Links-->
+        <!--Remote-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
+        <!--Local-->
+        <script src="courses.js"></script>
+        <style>
+            :root {
+                --bulma-primary-h: 152deg;
+                --bulma-primary-s: 27%;
+                --bulma-primary-l: 61%;
+                --bulma-link-h: 167deg;
+                --bulma-link-s: 73%;
+                --bulma-link-l: 28%;
+                --bulma-info-h: 163deg;
+                --bulma-info-s: 52%;
+                --bulma-info-l: 72%;
+                --bulma-scheme-h: 158;
+                --bulma-scheme-s: 31%;
+                --bulma-light-l: 100%;
+                --bulma-light-invert-l: 41%;
+                --bulma-dark-l: 36%;
+                --bulma-dark-invert-l: 35%;
+                --bulma-soft-l: 26%;
+                --bulma-family-primary: 'Fira Code';
+                --bulma-family-secondary: 'Fira Code';
+                --bulma-family-code: 'Fira Code';
+                --bulma-size-small: 0.85rem;
+                --bulma-size-normal: 0.95rem;
+                --bulma-size-medium: 1rem;
+                --bulma-size-large: 1.3rem;
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="index.html" style="font-size: 1.5em; font-weight: bold;">
+                    learnCode
+                </a>
+        
+                <!-- Navbar burger for mobile -->
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+        
+            <div id="navbarBasicExample" class="navbar-menu">
+                <div class="navbar-start">
+                    <a class="navbar-item" href="index.html">
+                        Home
+                    </a>
+                </div>
+        
+                <div class="navbar-end">
+                    <a class="navbar-item" href="login.html">
+                        Login
+                    </a>
+        
+                    <a class="navbar-item" href="register.html">
+                        Register
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="columns is-centered" style="padding-top: 5em;">
+            <div class="column is-3">
+                <div class="card">
+                    <div class="card-image">
+                        <figure class="image is-4by3">
+                            <img src="images/course-logos/programming-fundementals.png" alt="Programming Fundementals Logo"/>
+                        </figure>
+                    </div>
+
+                    <div class="card-content has-text-centered">
+                        <p class="title is-4">Programming Fundementals</p>
+                        <p class="subtitle is-6">Learn Fundementals for Programming.</p>
+                        <br>
+                        <p class="title is-5"><b>Prerequisites</b></p>
+                        <ul>
+                            <li>None :)</li>
+                        </ul>
+                    </div>
+                    <footer class="card-footer">
+                        <a href="#" class="card-footer-item">Start Course</a>
+                    </footer>
+                </div>
+            </div>
+
+            <div class="column is-3">
+                <div class="card">
+                    <div class="card-image">
+                        <figure class="image is-4by3">
+                            <img src="images/course-logos/html-beginner.png" alt="HTML Beginner Logo"/>
+                        </figure>
+                    </div>
+
+                    <div class="card-content has-text-centered">
+                        <p class="title is-4">HTML Beginner</p>
+                        <p class="subtitle is-6">Learn the basics of HTML like structuring and basic elements.</p>
+                        
+                        <br>
+                        <p class="title is-5"><b>Prerequisites</b></p>
+                        <ul>
+                            <li>None :)</li>
+                        </ul>
+                    </div>
+                    <footer class="card-footer">
+                        <a href="#" class="card-footer-item">Start Course</a>
+                    </footer>
+                </div>
+            </div>
+
+            <div class="column is-3">
+                <div class="card">
+                    <div class="card-image">
+                        <figure class="image is-4by3">
+                            <img src="images/course-logos/html-intermediate.png" alt="HTML Intermediate Logo"/>
+                        </figure>
+                    </div>
+
+                    <div class="card-content has-text-centered">
+                        <p class="title is-4">HTML Intermediate</p>
+                        <p class="subtitle is-6">Improve upon your previous knowledge. Learn to use media and organize your elements into sections.</p>
+                        
+                        <br>
+                        <p class="title is-5"><b>Prerequisites</b></p>
+                        <ul>
+                            <li>HTML Beginner</li>
+                        </ul>
+                    </div>
+                    <footer class="card-footer">
+                        <a href="#" class="card-footer-item">Start Course</a>
+                    </footer>
+                </div>
+            </div>
+        </div>
+
+        <div class="columns is-centered" style="padding-top: 1em;">
+            <div class="column is-3">
+                <div class="card">
+                    <div class="card-image">
+                        <figure class="image is-4by3">
+                            <img src="images/course-logos/html-advanced.png" alt="HTML Advanced Logo"/>
+                        </figure>
+                    </div>
+
+                    <div class="card-content has-text-centered">
+                        <p class="title is-4">HTML Advanced</p>
+                        <p class="subtitle is-6">Achive Mastery of HTML. Learn how to make forms, use semantics, and learn about more obscure attributes of elements.</p>
+                        <br>
+                        <p class="title is-5"><b>Prerequisites</b></p>
+                        <ul>
+                            <li>HTML Advanced</li>
+                        </ul>
+                    </div>
+                    <footer class="card-footer">
+                        <a href="#" class="card-footer-item">Start Course</a>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

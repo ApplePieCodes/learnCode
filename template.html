@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>learnCode</title>
         <!-- Remove On Publish <base href="https://applepiecodes.github.io/learnCode/"> -->
+        
 
         <!--Links-->
         <!--Remote-->
@@ -13,8 +14,6 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
-        <!--Local-->
-        <script src="index.js"></script>
         <style>
             :root {
                 --bulma-primary-h: 152deg;
@@ -44,7 +43,7 @@
         </style>
     </head>
     <body>
-        <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+        <nav class="navbar" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
                 <a class="navbar-item" href="index.html" style="font-size: 1.5em; font-weight: bold;">
                     learnCode
@@ -76,18 +75,17 @@
                 </div>
             </div>
         </nav>
-
-        <div class="content has-text-centered" style="margin-top: 8em;">
-            <h1 class="title is-1">learnCode</h1>
-            <h2 class="title is-3">Because Anyone Can</h2>
-            <p>Learn to code <b>The Right Way</b> with simple courses that build on each other.</p>
-        </div>
-
-        <div class="columns is-centered">
-            <div class="column is-narrow">
-                <button class="button is-primary">Get Started</button>
-                <a href="courses.html"><button class="button is-info is-outlined">View Course List</button></a>
-            </div>
-        </div>
     </body>
+    <script>
+        // JavaScript for toggling the mobile menu
+        document.addEventListener('DOMContentLoaded', () => {
+            const burger = document.querySelector('.navbar-burger');
+            const menu = document.querySelector('.navbar-menu');
+    
+            burger.addEventListener('click', () => {
+                burger.classList.toggle('is-active');
+                menu.classList.toggle('is-active');
+            });
+        });
+    </script>
 </html>
