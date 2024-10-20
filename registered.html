@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>learnCode</title>
         <!-- Remove On Publish <base href="https://applepiecodes.github.io/learnCode/"> -->
+        
 
         <!--Links-->
         <!--Remote-->
@@ -13,7 +14,6 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
-        <!--Local-->
         <style>
             :root {
                 --bulma-primary-h: 152deg;
@@ -43,7 +43,7 @@
         </style>
     </head>
     <body>
-        <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+        <nav class="navbar" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
                 <a class="navbar-item" href="index.html" style="font-size: 1.5em; font-weight: bold;">
                     learnCode
@@ -76,24 +76,18 @@
             </div>
         </nav>
 
-        <div class="content has-text-centered" style="margin-top: 8em;">
-            <h1 class="title is-1">learnCode</h1>
-            <h2 class="title is-3">Because Anyone Can</h2>
-            <p>Learn to code <b>The Right Way</b> with simple courses that build on each other.</p>
-        </div>
-
-        <div class="columns is-centered">
-            <div class="column is-narrow">
-                <button class="button is-primary">Get Started</button>
-                <a href="courses.html"><button class="button is-info is-outlined">View Course List</button></a>
-            </div>
+        <div class="content has-text-centered" style="padding-top: 5em;">
+            <p class="title is-1">You're all signed up!</p>
+            <p class="title is-6">Now all you have to do is verify your email. Click the link in the email sent to you from supabase (our database and auth provider) and click Login in the navbar (The verification link will lead to a failed page load. I don't know why, but it works so I won't change it.)</p>
         </div>
     </body>
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var burger = document.querySelector('.navbar-burger');
-            var menu = document.querySelector('.navbar-menu');
-            burger.addEventListener('click', function () {
+        // JavaScript for toggling the mobile menu
+        document.addEventListener('DOMContentLoaded', () => {
+            const burger = document.querySelector('.navbar-burger');
+            const menu = document.querySelector('.navbar-menu');
+    
+            burger.addEventListener('click', () => {
                 burger.classList.toggle('is-active');
                 menu.classList.toggle('is-active');
             });

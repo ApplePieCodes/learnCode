@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--Metadata-->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>learnCode - Register</title>
+        <!-- Remove On Publish <base href="https://applepiecodes.github.io/learnCode/"> -->
+        
+
+        <!--Links-->
+        <!--Remote-->
+        <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
+        <!--Local-->
+        <script src="reused.js"></script>
+        <script src="register.js"></script>
+        <style>
+            :root {
+                --bulma-primary-h: 152deg;
+                --bulma-primary-s: 27%;
+                --bulma-primary-l: 61%;
+                --bulma-link-h: 167deg;
+                --bulma-link-s: 73%;
+                --bulma-link-l: 28%;
+                --bulma-info-h: 163deg;
+                --bulma-info-s: 52%;
+                --bulma-info-l: 72%;
+                --bulma-scheme-h: 158;
+                --bulma-scheme-s: 31%;
+                --bulma-light-l: 100%;
+                --bulma-light-invert-l: 41%;
+                --bulma-dark-l: 36%;
+                --bulma-dark-invert-l: 35%;
+                --bulma-soft-l: 26%;
+                --bulma-family-primary: 'Fira Code';
+                --bulma-family-secondary: 'Fira Code';
+                --bulma-family-code: 'Fira Code';
+                --bulma-size-small: 0.85rem;
+                --bulma-size-normal: 0.95rem;
+                --bulma-size-medium: 1rem;
+                --bulma-size-large: 1.3rem;
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="index.html" style="font-size: 1.5em; font-weight: bold;">
+                    learnCode
+                </a>
+        
+                <!-- Navbar burger for mobile -->
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+        
+            <div id="navbarBasicExample" class="navbar-menu">
+                <div class="navbar-start">
+                    <a class="navbar-item" href="index.html">
+                        Home
+                    </a>
+                </div>
+        
+                <div class="navbar-end">
+                    <a class="navbar-item" href="login.html">
+                        Login
+                    </a>
+        
+                    <a class="navbar-item" href="register.html">
+                        Register
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="content has-text-centered" style="padding-left: 20em; padding-right: 20em;">
+            <p class="title is-1">Register</p>
+            
+            <!-- Username Field -->
+            <div class="field">
+              <label class="label has-text-left" style="padding-top: 1em;">Username</label>
+              <div class="control">
+                <input class="input" id="username" type="text" placeholder="Enter A Username">
+              </div>
+              <p class="help is-danger has-text-left" id="username-error" style="display: none;">Username is required</p>
+            </div>
+            
+            <!-- Email Field -->
+            <div class="field">
+              <label class="label has-text-left" style="padding-top: 1em;">Email</label>
+              <div class="control">
+                <input class="input" id="email" type="text" placeholder="Enter An Email">
+              </div>
+              <p class="help is-danger has-text-left" id="email-error" style="display: none;">Invalid email format</p>
+            </div>
+            
+            <!-- Password Field -->
+            <div class="field">
+              <label class="label has-text-left" style="padding-top: 1em;">Password</label>
+              <div class="control">
+                <input class="input" id="password" type="password" placeholder="Enter A Password">
+              </div>
+              <p class="help is-danger has-text-left" id="password-error" style="display: none;">Password must be at least 6 characters</p>
+            </div>
+            
+            <!-- Confirm Password Field -->
+            <div class="field">
+              <label class="label has-text-left" style="padding-top: 1em;">Comfirm Password</label>
+              <div class="control">
+                <input class="input" id="confirmPassword" type="password" placeholder="Confirm Your Password">
+              </div>
+              <p class="help is-danger has-text-left" id="confirmPassword-error" style="display: none;">Passwords do not match</p>
+            </div>
+          
+            <!-- Checkbox for No Hacking -->
+            <div class="field">
+              <div class="control has-text-left">
+                <label class="checkbox">
+                  <input id="noHack" type="checkbox">
+                  I won't try and hack learnCode
+                </label>
+              </div>
+              <p class="help is-danger has-text-left" id="agreeNoHack-error" style="display: none;">You must check this box.</p>
+            </div>
+            
+            <!-- Checkbox for Newsletter -->
+            <div class="field">
+              <div class="control has-text-left">
+                <label class="checkbox">
+                  <input id="newsletter" type="checkbox">
+                  I want to get random newsletters (3 times a month at most).
+                </label>
+              </div>
+            </div>
+            
+            <!-- Submit Button -->
+            <div class="control">
+              <button class="button is-link" onclick="registerUser()">Submit</button>
+            </div>
+        </div>          
+    </body>
+    <script>
+        // JavaScript for toggling the mobile menu
+        document.addEventListener('DOMContentLoaded', () => {
+            const burger = document.querySelector('.navbar-burger');
+            const menu = document.querySelector('.navbar-menu');
+    
+            burger.addEventListener('click', () => {
+                burger.classList.toggle('is-active');
+                menu.classList.toggle('is-active');
+            });
+        });
+    </script>
+</html>
