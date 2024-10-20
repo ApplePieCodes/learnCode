@@ -19,20 +19,22 @@ async function registerUser() {
         isValid = false;
     }
 
-    var { data, error } = await client
-        .from("UserData")
-        .select("*")
-        .eq("username", usernameInput);
+    const { data, error } = await client
+    .from("UserData")
+    .select("*")
+    .eq("username", usernameInput)
+    .single();
 
-    if (error) {
-        console.log(error);
+    if (error && error.code !== 'PGRST116') { // PGRST116 is "No rows found"
+        console.error("Supabase Query Error:", error.message);
         return;
     }
-
-    if (data.length > 0) {
+    
+    if (data) {
         showError("username-error", "User with this username already exists");
         return;
     }
+
 
     if (!emailInput || emailInput === "") {
         showError("email-error", "You must enter an email.");
